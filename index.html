@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bettroi — AI-Powered Retail Intelligence Platform</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand-primary: #6C63FF;
+  --brand-secondary: #00D4AA;
+  --brand-accent: #FF6B6B;
+  --brand-gold: #F5A623;
+  --bg-dark: #0a0a0f;
+  --bg-card: rgba(255,255,255,0.04);
+  --bg-card-hover: rgba(255,255,255,0.08);
+  --text-primary: #f0f0f5;
+  --text-secondary: #8888aa;
+  --text-muted: #555577;
+  --gradient-primary: linear-gradient(135deg, #6C63FF, #00D4AA);
+  --gradient-warm: linear-gradient(135deg, #F5A623, #FF6B6B);
+  --gradient-cool: linear-gradient(135deg, #00D4AA, #6C63FF);
+}
+
+.reveal {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text-primary);
+}
+
+.reveal .slides { text-align: left; }
+
+.reveal .slides section {
+  padding: 40px 60px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.reveal h1 { font-size: 2.8em; }
+.reveal h2 { font-size: 1.8em; margin-bottom: 0.6em; }
+.reveal h3 { font-size: 1.2em; color: var(--brand-secondary); font-weight: 600; }
+
+.reveal p { font-size: 0.75em; line-height: 1.6; color: var(--text-secondary); }
+
+.slide-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.tag-industry { background: rgba(108,99,255,0.15); color: var(--brand-primary); }
+.tag-problem { background: rgba(255,107,107,0.15); color: var(--brand-accent); }
+.tag-platform { background: rgba(0,212,170,0.15); color: var(--brand-secondary); }
+.tag-module { background: rgba(245,166,35,0.15); color: var(--brand-gold); }
+.tag-ai { background: rgba(108,99,255,0.15); color: var(--brand-primary); }
+.tag-roi { background: rgba(0,212,170,0.15); color: var(--brand-secondary); }
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 8px 0;
+  transition: all 0.3s ease;
+}
+.card:hover { background: var(--bg-card-hover); border-color: rgba(108,99,255,0.3); }
+
+.card-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.stat-box {
+  text-align: center;
+  padding: 20px;
+}
+.stat-number {
+  font-size: 2em;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 0.6em;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.metric-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.7em;
+}
+.metric-row:last-child { border: none; }
+.metric-before {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  min-width: 80px;
+}
+.metric-arrow { color: var(--brand-secondary); font-weight: 700; }
+.metric-after { color: var(--brand-secondary); font-weight: 700; min-width: 80px; }
+.metric-label { color: var(--text-secondary); }
+
+.tier-architecture {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+.tier {
+  border-radius: 12px;
+  padding: 20px 28px;
+  position: relative;
+}
+.tier-experience {
+  background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(0,212,170,0.08));
+  border: 1px solid rgba(108,99,255,0.25);
+}
+.tier-intelligence {
+  background: linear-gradient(135deg, rgba(0,212,170,0.10), rgba(108,99,255,0.06));
+  border: 1px solid rgba(0,212,170,0.2);
+}
+.tier-foundation {
+  background: linear-gradient(135deg, rgba(245,166,35,0.12), rgba(255,107,107,0.08));
+  border: 2px solid rgba(245,166,35,0.4);
+}
+.tier-label {
+  font-size: 0.55em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.tier-items {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.tier-item {
+  font-size: 0.65em;
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.feature-list li {
+  font-size: 0.68em;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.5;
+}
+.feature-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--brand-secondary);
+  font-weight: 700;
+}
+
+.quote-block {
+  border-left: 3px solid var(--brand-primary);
+  padding: 16px 24px;
+  margin: 16px 0;
+  background: rgba(108,99,255,0.05);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 0.72em;
+  color: var(--text-secondary);
+}
+.quote-attr {
+  font-style: normal;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.step-flow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+.step-circle {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8em;
+  flex-shrink: 0;
+}
+.step-connector {
+  height: 2px;
+  width: 40px;
+  background: var(--gradient-primary);
+  flex-shrink: 0;
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+.ai-chip {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.ai-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  flex-shrink: 0;
+}
+.ai-chip-name {
+  font-size: 0.65em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.ai-chip-desc {
+  font-size: 0.55em;
+  color: var(--text-secondary);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+}
+.timeline-phase {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+.phase-marker {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.75em;
+  flex-shrink: 0;
+}
+.phase-content { flex: 1; }
+.phase-title {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.phase-time {
+  font-size: 0.55em;
+  color: var(--brand-secondary);
+  font-weight: 600;
+}
+.phase-desc {
+  font-size: 0.6em;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.bottom-tagline {
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  right: 60px;
+  font-size: 0.6em;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 12px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,212,170,0.1));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 16px;
+  padding: 28px 36px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.warn-icon::before { content: '⚠'; }
+.check-icon::before { content: '✓'; color: var(--brand-secondary); }
+
+.reveal .slide-number { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.6em; }
+
+/* Background decoration */
+.reveal .slides section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108,99,255,0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============ SLIDE 1: TITLE ============ -->
+<section data-background-color="#0a0a0f">
+  <div style="display:flex; flex-direction:column; justify-content:center; height:100%;">
+    <div style="margin-bottom: 24px;">
+      <span style="font-size:1.4em; font-weight:900; letter-spacing:0.04em;">BETTROI</span>
+      <span style="font-size:0.7em; color:var(--text-muted); margin-left:12px;">est. 2024</span>
+    </div>
+    <h1 style="margin-bottom:16px;">
+      <span class="gradient-text">AI-Powered</span><br>
+      Retail Intelligence<br>
+      Platform
+    </h1>
+    <p style="font-size:0.9em; color:var(--text-secondary); max-width:600px;">
+      Built for India's Premium Retail Chains
+    </p>
+    <div style="margin-top: 40px; display:flex; gap:24px; align-items:center;">
+      <span style="font-size:0.6em; color:var(--text-muted); letter-spacing:0.15em; text-transform:uppercase;">From Billing to Brilliance</span>
+      <div style="height:1px; width:120px; background:var(--gradient-primary);"></div>
+    </div>
+  </div>
+  <aside class="notes">
+    Keep this slide up during introductions. Let the tagline "From Billing to Brilliance" sit — it plants the POS-to-AI journey in their mind from the start. Don't explain it yet.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 2: INDUSTRY LANDSCAPE ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-industry">Industry Landscape</span>
+  <h2>India's Organized Retail Is at an <span class="gradient-text">Inflection Point</span></h2>
+  <div class="card-grid grid-4" style="margin-top:24px;">
+    <div class="card stat-box">
+      <div class="stat-number">$28B</div>
+      <div class="stat-label">India Beauty &amp; Personal Care Market by 2028</div>
+    </div>
+    <div class="card stat-box">
+      <div class="stat-number">18-22%</div>
+      <div class="stat-label">Premium Fragrance CAGR</div>
+    </div>
+    <div class="card stat-box">
+      <div class="stat-number">78%</div>
+      <div class="stat-label">Retail Chains Still on Legacy Billing Systems</div>
+    </div>
+    <div class="card stat-box">
+      <div class="stat-number">2.3x</div>
+      <div class="stat-label">Faster Growth for Chains with Real-Time Analytics</div>
+    </div>
+  </div>
+  <p style="margin-top:24px; font-size:0.72em;">
+    The industry is growing fast — but most retail infrastructure was built for a different era.
+    The winners will be the chains that close the gap between <strong style="color:var(--text-primary);">brand ambition</strong> and <strong style="color:var(--text-primary);">operational backbone</strong>.
+  </p>
+  <aside class="notes">
+    Let the "78% legacy billing" stat land. Don't point at anyone — let them self-identify. "Retailers with real-time analytics grow 2.3x faster" creates urgency. The audience should be thinking: "Are we in the 78% or the 22%?"
+  </aside>
+</section>
+
+<!-- ============ SLIDE 3: THE PROBLEM ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-problem">The Pattern We See</span>
+  <h2>What We Hear From Every <span style="color:var(--brand-accent);">Growing Retail Chain</span></h2>
+  <div class="two-col">
+    <div>
+      <h3 style="margin-bottom:12px;">The Brand Side ✓</h3>
+      <ul class="feature-list">
+        <li>Beautiful stores, strong heritage</li>
+        <li>Loyal customer base, growing footprint</li>
+        <li>Premium positioning, expanding portfolio</li>
+        <li>Multi-channel presence (retail, e-commerce, shop-in-shop)</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-bottom:12px; color:var(--brand-accent);">The Operations Side ⚠</h3>
+      <ul class="feature-list">
+        <li style="color:var(--brand-accent);">Manual billing slowing down peak hours</li>
+        <li style="color:var(--brand-accent);">No real-time visibility across stores</li>
+        <li style="color:var(--brand-accent);">HQ decisions based on yesterday's data</li>
+        <li style="color:var(--brand-accent);">Staff performance invisible until quarterly reviews</li>
+        <li style="color:var(--brand-accent);">Franchise and owned stores on different systems</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quote-block">
+    "We have 100+ stores but our HQ team spends Monday mornings calling store managers for weekend numbers."
+    <div class="quote-attr">— Operations Head, Premium Retail Chain</div>
+  </div>
+  <div class="bottom-tagline">Tools that worked at 30 stores break at 100. And they completely fail at 150.</div>
+  <aside class="notes">
+    This is the "we see you" slide. Frame it as industry-wide, NOT Ajmal-specific. "We hear some version of this in every initial conversation." The anonymous quote should feel eerily familiar. The franchise/owned distinction is a deliberate touch — they run both models.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 4: PLATFORM ARCHITECTURE ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-platform">Platform Overview</span>
+  <h2>One Platform. Every Store. <span class="gradient-text">Every Insight.</span></h2>
+  <div class="tier-architecture">
+    <div class="tier tier-experience">
+      <div class="tier-label" style="color:var(--brand-primary);">Experience Layer</div>
+      <div class="tier-items">
+        <span class="tier-item">AI Fragrance Advisor</span>
+        <span class="tier-item">WhatsApp CRM</span>
+        <span class="tier-item">Dynamic Pricing Engine</span>
+        <span class="tier-item">L&amp;D Academy</span>
+      </div>
+    </div>
+    <div class="tier tier-intelligence">
+      <div class="tier-label" style="color:var(--brand-secondary);">Intelligence Layer</div>
+      <div class="tier-items">
+        <span class="tier-item">Demand Forecasting</span>
+        <span class="tier-item">Customer Analytics</span>
+        <span class="tier-item">Inventory Intelligence</span>
+        <span class="tier-item">Staff Performance AI</span>
+      </div>
+    </div>
+    <div class="tier tier-foundation">
+      <div class="tier-label" style="color:var(--brand-gold);">⬤ Foundation Layer — Start Here</div>
+      <div class="tier-items">
+        <span class="tier-item" style="background:rgba(245,166,35,0.15); font-weight:700;">Smart POS &amp; Store Operations</span>
+        <span class="tier-item" style="background:rgba(245,166,35,0.15); font-weight:700;">Real-Time Command Center &amp; Dashboards</span>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:16px; font-size:0.7em; text-align:center; color:var(--text-secondary);">
+    The foundation powers the intelligence. The intelligence powers the experience.
+  </p>
+  <aside class="notes">
+    THIS is the key architectural slide. POS and dashboards are the mandatory foundation — not because we're pushing them, but because the AI layers literally cannot work without clean operational data. "You cannot run AI on bad data" is the unassailable logic. The golden border on the foundation layer draws the eye naturally.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 5: SMART POS ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-module">Foundation Module</span>
+  <h2>Smart POS — <span class="gradient-text">The Nerve Center</span> of Every Store</h2>
+  <div class="two-col">
+    <div>
+      <ul class="feature-list">
+        <li><strong style="color:var(--text-primary);">One-tap billing</strong> with auto product recognition</li>
+        <li><strong style="color:var(--text-primary);">Auto-applied promotions</strong> — no manual discount entry</li>
+        <li><strong style="color:var(--text-primary);">Offline-first</strong> — works without internet, syncs when back</li>
+        <li><strong style="color:var(--text-primary);">Franchise + company-owned</strong> on one unified system</li>
+        <li><strong style="color:var(--text-primary);">Multi-format:</strong> full store, kiosk, shop-in-shop counter</li>
+        <li><strong style="color:var(--text-primary);">Integrated payments:</strong> UPI, card, wallet — auto-reconciled</li>
+        <li><strong style="color:var(--text-primary);">GST-ready invoicing</strong> with instant digital receipts</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-bottom:12px;">What Changes</h3>
+      <div class="metric-row">
+        <span class="metric-before">4-5 min</span>
+        <span class="metric-arrow">→</span>
+        <span class="metric-after">45 sec</span>
+        <span class="metric-label">Billing time per transaction</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-before">Manual</span>
+        <span class="metric-arrow">→</span>
+        <span class="metric-after">Auto</span>
+        <span class="metric-label">Promo &amp; discount application</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-before">90 min</span>
+        <span class="metric-arrow">→</span>
+        <span class="metric-after">5 min</span>
+        <span class="metric-label">End-of-day reconciliation</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-before">Next day</span>
+        <span class="metric-arrow">→</span>
+        <span class="metric-after">Real-time</span>
+        <span class="metric-label">Data available to HQ</span>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-tagline">Every transaction becomes a data point. Every data point powers AI.</div>
+  <aside class="notes">
+    "Most POS systems were designed as cash registers that happen to be digital. Ours was designed as a data capture engine that happens to do billing." The offline-first architecture matters for India — mall WiFi drops during peak hours. Franchise standardization is built in — HQ gets one clean data feed, not 50 Excel formats.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 6: COMMAND CENTER ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-module">Foundation Module</span>
+  <h2>Command Center — <span class="gradient-text">See Everything. Right Now.</span></h2>
+  <div class="two-col">
+    <div>
+      <div class="card" style="margin-bottom:8px;">
+        <div style="font-size:0.6em; font-weight:600; color:var(--brand-secondary);">LIVE METRICS</div>
+        <ul class="feature-list">
+          <li>Store-by-store sales — today, this week, vs target</li>
+          <li>Staff performance heatmap by store &amp; region</li>
+          <li>Top-selling SKUs by city, format, season</li>
+          <li>Franchise vs. company-owned comparison</li>
+          <li>Alert flags: below target, stock-out, high returns</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:8px;">
+        <div style="font-size:0.6em; font-weight:600; color:var(--brand-gold);">KEY CAPABILITIES</div>
+        <ul class="feature-list">
+          <li><strong style="color:var(--text-primary);">Zero manual data entry</strong> — feeds directly from POS</li>
+          <li><strong style="color:var(--text-primary);">Role-based views:</strong> store manager, area head, HQ, CEO</li>
+          <li><strong style="color:var(--text-primary);">Mobile-first:</strong> CEO checks Sunday sales from Dubai on Monday morning</li>
+          <li><strong style="color:var(--text-primary);">Auto-reports:</strong> daily, weekly, monthly — no one fills a spreadsheet</li>
+          <li><strong style="color:var(--text-primary);">Franchise owner portal</strong> with controlled visibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="quote-block">
+    The #1 complaint from HQ teams: "I cannot get accurate store data without calling someone."<br>
+    This eliminates that — entirely.
+  </div>
+  <aside class="notes">
+    Say "CEO checks Sunday sales from Dubai on Monday morning" casually — as if this is a common scenario for retail chains with distributed leadership. It is. The "zero manual data entry" line is the silent killer — it directly addresses their exact pain but framed as a universal feature. The franchise owner portal shows you understand hybrid models.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 7: AI FRAGRANCE ADVISOR ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">AI Module</span>
+  <h2>AI Fragrance Advisor — <span class="gradient-text">Turn Every Associate Into an Expert</span></h2>
+  <div class="step-flow" style="justify-content:center; margin:20px 0;">
+    <div class="step-circle" style="background:rgba(108,99,255,0.15); color:var(--brand-primary);">1</div>
+    <div style="font-size:0.6em; color:var(--text-secondary);">Customer shares<br>preferences</div>
+    <div class="step-connector"></div>
+    <div class="step-circle" style="background:rgba(0,212,170,0.15); color:var(--brand-secondary);">2</div>
+    <div style="font-size:0.6em; color:var(--text-secondary);">AI matches fragrance<br>knowledge graph</div>
+    <div class="step-connector"></div>
+    <div class="step-circle" style="background:rgba(245,166,35,0.15); color:var(--brand-gold);">3</div>
+    <div style="font-size:0.6em; color:var(--text-secondary);">3-4 recommendations<br>with talking points</div>
+  </div>
+  <div class="two-col">
+    <div>
+      <ul class="feature-list">
+        <li>Matches by occasion, intensity, budget, note preferences</li>
+        <li>Learns from purchase history: "Customers who bought X love Y"</li>
+        <li>Cross-sell intelligence: attar buyer → suggest matching bakhoor</li>
+        <li>Handles full range: ₹375 body mist to ₹7,500+ luxury oud</li>
+        <li>Works on store tablet or associate's phone</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">22-35%</div>
+        <div class="stat-label">Increase in average basket size<br>with AI-assisted recommendations</div>
+      </div>
+      <p style="font-size:0.62em; margin-top:12px;">
+        Your best salesperson has 10 years of fragrance knowledge.<br>
+        This gives a <strong style="color:var(--text-primary);">new hire 80% of that knowledge on day one.</strong>
+      </p>
+    </div>
+  </div>
+  <aside class="notes">
+    This is the WOW slide. "Fragrance is one of the hardest categories for recommendations — nose fatigue sets in after 3-4 tries. The AI narrows the field so customers try 2-3 and love one." The cross-sell from EDP to bakhoor/attar is where real margin uplift happens. Mention the full price range naturally — it shows deep category understanding. No other retail tech platform has a fragrance-specific recommendation engine.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 8: DEMAND & INVENTORY ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">AI Module</span>
+  <h2>Know What Will Sell, Where, <span class="gradient-text">Before It Happens</span></h2>
+  <div class="two-col">
+    <div>
+      <h3>Demand Forecasting</h3>
+      <ul class="feature-list">
+        <li>AI predicts SKU-level demand by store, by week</li>
+        <li>Factors in: Eid, Diwali, wedding season, weather, local events</li>
+        <li>Regional intelligence — South India ≠ North India ≠ Metro</li>
+        <li>"Oud demand spikes 4-6 weeks before Eid. System flags at 8 weeks."</li>
+      </ul>
+      <div class="card" style="text-align:center; margin-top:12px;">
+        <div class="stat-number" style="font-size:1.4em;">40%</div>
+        <div class="stat-label">Stockout reduction</div>
+      </div>
+    </div>
+    <div>
+      <h3>Inventory Intelligence</h3>
+      <ul class="feature-list">
+        <li><strong style="color:var(--text-primary);">Computer vision:</strong> phone camera scans shelf, counts units, flags gaps</li>
+        <li>Auto-replenishment triggers to warehouse</li>
+        <li>Dead stock alerts: "This SKU hasn't moved in 60 days at 14 stores"</li>
+        <li>Franchise stock visibility — know every shelf, every store</li>
+      </ul>
+      <div class="card" style="text-align:center; margin-top:12px;">
+        <div class="stat-number" style="font-size:1.4em;">25%</div>
+        <div class="stat-label">Overstock reduction</div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    "Fragrance has brutal seasonality — Eid, Diwali, wedding season, Valentine's — and each region peaks differently. The AI learns YOUR patterns, not generic retail patterns." The computer vision inventory is a wow moment: "Walk the store with your phone. In 15 minutes, complete auditable inventory count. No barcode scanning, no manual entry." For franchise stores, inventory is usually a black box — this opens it up.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 9: STAFF PERFORMANCE ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">AI Module</span>
+  <h2>Your People Are Your Stores. <span class="gradient-text">Now You Can See.</span></h2>
+  <div class="two-col">
+    <div>
+      <h3>Performance Intelligence</h3>
+      <ul class="feature-list">
+        <li>Individual scorecards: sales/hour, conversion, basket size, upsell rate</li>
+        <li>Store manager scorecards: team performance, target attainment</li>
+        <li>AI coaching triggers: "Ravi at Store 47 has high conversion but low basket — coach on upselling"</li>
+        <li>Gamification: leaderboards, streaks, peer benchmarking</li>
+        <li>Area-level comparisons: staffing issues vs. location issues</li>
+      </ul>
+    </div>
+    <div>
+      <h3>AI-Powered Training</h3>
+      <ul class="feature-list">
+        <li>Replaces travel-heavy trainer model entirely</li>
+        <li>Interactive modules: product knowledge, POS operation, selling techniques</li>
+        <li>AI tests if associate can recommend correctly <em>before</em> they face a customer</li>
+        <li>Fragrance family quizzes, note profiles, customer scenarios</li>
+      </ul>
+      <div class="card" style="text-align:center; margin-top:12px;">
+        <div style="display:flex; justify-content:center; gap:24px;">
+          <div>
+            <div class="stat-number" style="font-size:1.2em;">3 wks → 5 days</div>
+            <div class="stat-label">New hire ramp-up time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-tagline">Dashboards are not surveillance — they make your best performers visible and your struggling performers get help earlier.</div>
+  <aside class="notes">
+    "When you have 100+ stores and growing, you're hiring constantly. Every new hire is a revenue risk until trained. The AI training compresses that risk window dramatically." The performance dashboards feed directly into the Command Center — an area manager sees staffing-driven vs. location-driven issues at a glance. The AI training eliminates the need for trainers to travel to every new store.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 10: L&D ACADEMY ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">AI Module</span>
+  <h2>Bettroi Academy — <span class="gradient-text">Where Your Team Levels Up</span></h2>
+  <div class="two-col">
+    <div>
+      <h3>Learning Platform</h3>
+      <ul class="feature-list">
+        <li><strong style="color:var(--text-primary);">Micro-learning:</strong> bite-sized modules on product knowledge, selling techniques, and brand story</li>
+        <li><strong style="color:var(--text-primary);">Role-based paths:</strong> new hire onboarding, store manager, franchise partner, area head</li>
+        <li><strong style="color:var(--text-primary);">AI-personalized:</strong> curriculum adapts to each associate's performance gaps automatically</li>
+        <li><strong style="color:var(--text-primary);">Fragrance masterclasses:</strong> oud families, note profiles, occasion pairing, layering techniques</li>
+        <li><strong style="color:var(--text-primary);">Multi-language:</strong> Hindi, English, regional — learn in the language you think in</li>
+        <li><strong style="color:var(--text-primary);">Mobile-first:</strong> learn on the shop floor between customers, no classroom needed</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:var(--brand-gold);">Gamification Engine</h3>
+      <ul class="feature-list">
+        <li><strong style="color:var(--text-primary);">XP points</strong> for completing modules, quizzes, daily challenges, and real sales milestones</li>
+        <li><strong style="color:var(--text-primary);">Leaderboards:</strong> store-level, region-level, and national rankings — updated in real time</li>
+        <li><strong style="color:var(--text-primary);">Badges &amp; certifications:</strong> "Oud Expert", "Top Seller", "Customer Champion"</li>
+        <li><strong style="color:var(--text-primary);">Streak rewards:</strong> 7-day learning streaks unlock perks and recognition</li>
+        <li><strong style="color:var(--text-primary);">Team battles:</strong> store vs. store competitions tied to real KPIs</li>
+        <li><strong style="color:var(--text-primary);">Manager view:</strong> track team progress, spot gaps, identify coaching moments</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-grid grid-3" style="margin-top:12px;">
+    <div class="card" style="text-align:center;">
+      <div class="stat-number" style="font-size:1.2em;">3x</div>
+      <div class="stat-label">Course completion rate<br>vs traditional training</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="stat-number" style="font-size:1.2em;">60%</div>
+      <div class="stat-label">Knowledge retention<br>improvement</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="stat-number" style="font-size:1.2em;">85%</div>
+      <div class="stat-label">Daily active engagement<br>with gamification</div>
+    </div>
+  </div>
+  <aside class="notes">
+    "Traditional retail training is broken — send a trainer to 100 stores, or fly staff to HQ. Neither scales. Bettroi Academy makes every phone a training center." Gamification is not gimmicks — it drives daily engagement. Associates who complete learning paths sell 22% more. The leaderboards create healthy competition — top performers get visible recognition, struggling staff get support earlier. Certifications like "Oud Expert" give associates pride and customers confidence.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 11: CUSTOMER & WHATSAPP ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">AI Module</span>
+  <h2>Know Your Customer. Reach Them. <span class="gradient-text">Keep Them.</span></h2>
+  <div class="two-col">
+    <div>
+      <h3>Customer Analytics</h3>
+      <ul class="feature-list">
+        <li>Unified profiles across <strong style="color:var(--text-primary);">all channels</strong> — retail, Shoppers Stop, Nykaa, Amazon, airports</li>
+        <li>Segments: first-time, repeat loyalist, lapsed (90+ days), high-value</li>
+        <li>Purchase pattern: "Buys a new EDP every 3 months — trigger reminder at 2.5"</li>
+        <li>Lifetime value prediction: "These 2,000 customers = 40% of next year's revenue"</li>
+        <li>Churn risk alerts: "142 high-value customers haven't purchased in 60 days"</li>
+      </ul>
+    </div>
+    <div>
+      <h3>WhatsApp CRM &amp; Clienteling</h3>
+      <ul class="feature-list">
+        <li><strong style="color:var(--text-primary);">Automated messages:</strong> order confirm, restock reminders, birthday offers</li>
+        <li><strong style="color:var(--text-primary);">Campaign automation:</strong> "Send Eid collection preview to all oud buyers from last Eid"</li>
+        <li><strong style="color:var(--text-primary);">Store associate clienteling:</strong> top 20 customers with preferences &amp; next-buy suggestions</li>
+        <li><strong style="color:var(--text-primary);">Two-way chat:</strong> customer questions, repeat orders via WhatsApp</li>
+      </ul>
+      <div class="card" style="margin-top:12px;">
+        <p style="font-size:0.6em; margin:0; color:var(--text-secondary);">
+          <em>Customer buys 50ml EDP on Jan 15. On Mar 25, they get:</em><br>
+          <strong style="color:var(--text-primary);">"Hi Priya, running low on Wisal? Reorder now + explore our spring collection. Reply YES to order."</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    "In fragrance, the replenishment cycle is predictable. A 50ml EDP lasts 2-3 months. If you know when they bought it, you know when they'll need more." Mention all channels naturally — retail, Shoppers Stop, Nykaa, Amazon, airports — showing you understand the multi-channel reality. "97% of customers are on WhatsApp. But manual WhatsApp CRM is chaos. This automates the right message to the right customer at the right time."
+  </aside>
+</section>
+
+<!-- ============ SLIDE 11: DYNAMIC PRICING ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">AI Module</span>
+  <h2>The Right Price. The Right Store. <span class="gradient-text">The Right Time.</span></h2>
+  <div class="card-grid grid-2" style="margin-top:20px;">
+    <div class="card">
+      <h3>Intelligent Pricing</h3>
+      <ul class="feature-list">
+        <li>AI-recommended adjustments based on demand, stock levels, competition</li>
+        <li>Markdown optimization: "15% off moves volume; 30% off destroys margin — AI finds the sweet spot"</li>
+        <li>Festive pricing: "Eid gift sets — last year 20% off moved 3x volume, test 15% this year"</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Channel Governance</h3>
+      <ul class="feature-list">
+        <li>Channel price harmonization: retail = Nykaa = Amazon</li>
+        <li>Franchise pricing governance: set floors &amp; ceilings, allow controlled flexibility</li>
+        <li>Alert on external marketplace price drift</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="text-align:center; margin-top:16px;">
+    <div style="display:flex; justify-content:center; gap:48px;">
+      <div>
+        <div class="stat-number" style="font-size:1.4em;">3-8%</div>
+        <div class="stat-label">Margin improvement</div>
+      </div>
+      <div>
+        <div class="stat-number" style="font-size:1.4em;">Zero</div>
+        <div class="stat-label">Channel price conflicts</div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:0.65em; text-align:center; margin-top:12px;">
+    Most retailers over-discount because they lack price elasticity data. The AI finds the discount that moves inventory without destroying margin.
+  </p>
+  <aside class="notes">
+    "If your Nykaa price is lower than your store price, you train customers to buy online. If franchise prices differ from company-owned, you create brand confusion. The engine keeps everything aligned." This module gets the CFO's attention. It also reinforces the need for clean POS data — the pricing engine needs accurate transaction data to work. The markdown optimization alone typically pays for the platform.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 12: AI ADVANTAGE SUMMARY ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-ai">Technology</span>
+  <h2><span class="gradient-text">9 AI Engines.</span> One Platform. Compounding Intelligence.</h2>
+  <div class="ai-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(108,99,255,0.15);">🧴</div>
+      <div>
+        <div class="ai-chip-name">FragranceAI</div>
+        <div class="ai-chip-desc">Personalized scent recommendations from purchase + preference data</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(0,212,170,0.15);">📈</div>
+      <div>
+        <div class="ai-chip-name">DemandAI</div>
+        <div class="ai-chip-desc">Predictive demand forecasting with cultural event awareness</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(245,166,35,0.15);">👁</div>
+      <div>
+        <div class="ai-chip-name">VisionAI</div>
+        <div class="ai-chip-desc">Computer vision inventory counting &amp; shelf compliance</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(255,107,107,0.15);">💰</div>
+      <div>
+        <div class="ai-chip-name">PricingAI</div>
+        <div class="ai-chip-desc">Dynamic pricing optimization across channels &amp; store types</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(108,99,255,0.15);">👥</div>
+      <div>
+        <div class="ai-chip-name">PeopleAI</div>
+        <div class="ai-chip-desc">Staff performance scoring, coaching triggers &amp; scheduling</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(0,212,170,0.15);">🎓</div>
+      <div>
+        <div class="ai-chip-name">AcademyAI</div>
+        <div class="ai-chip-desc">Gamified L&amp;D with adaptive learning paths &amp; certifications</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(245,166,35,0.15);">🎯</div>
+      <div>
+        <div class="ai-chip-name">CustomerAI</div>
+        <div class="ai-chip-desc">Segmentation, lifetime value prediction &amp; churn prevention</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(255,107,107,0.15);">💬</div>
+      <div>
+        <div class="ai-chip-name">ConversationAI</div>
+        <div class="ai-chip-desc">WhatsApp automation, chatbot &amp; clienteling prompts</div>
+      </div>
+    </div>
+    <div class="ai-chip">
+      <div class="ai-icon" style="background:rgba(108,99,255,0.15);">🔍</div>
+      <div>
+        <div class="ai-chip-name">InsightAI</div>
+        <div class="ai-chip-desc">"What were my top 5 stores this Eid?" — instant answers in plain language</div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:0.65em; text-align:center; margin-top:16px;">
+    Each AI engine gets smarter over time. And they feed each other — DemandAI uses PricingAI data,
+    FragranceAI uses CustomerAI profiles, InsightAI sits on top of everything.
+  </p>
+  <aside class="notes">
+    "Any vendor can say 'AI-powered.' We show exactly which models power which capabilities, and how they compound." The InsightAI example: "Imagine your CEO in Dubai opening WhatsApp, typing 'What were my top 10 stores this Eid versus last Eid?' and getting an instant, accurate answer with a chart. No analyst needed." This is the second "Dubai" reference — keep it casual.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 13: ROI ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-roi">Business Case</span>
+  <h2>What the <span class="gradient-text">Numbers</span> Look Like</h2>
+  <div class="two-col">
+    <div>
+      <h3>Operational Savings</h3>
+      <div class="card">
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px;">15-20 hrs/store</span>
+          <span class="metric-label">Monthly billing time saved</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px;">30+ hrs/month</span>
+          <span class="metric-label">HQ manual dashboard work eliminated</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px;">70% reduction</span>
+          <span class="metric-label">Inventory counting time</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px;">3 wks → 5 days</span>
+          <span class="metric-label">New hire training time</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px;">Near-zero</span>
+          <span class="metric-label">Promo / pricing errors</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>Revenue Uplift</h3>
+      <div class="card">
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px; background:var(--gradient-warm); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">22-35%</span>
+          <span class="metric-label">Basket size increase (AI recommendations)</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px; background:var(--gradient-warm); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">40%</span>
+          <span class="metric-label">Stockout reduction = captured lost sales</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px; background:var(--gradient-warm); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">15-20%</span>
+          <span class="metric-label">Repeat purchase improvement (WhatsApp CRM)</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-after" style="min-width:120px; background:var(--gradient-warm); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">3-8%</span>
+          <span class="metric-label">Margin improvement (dynamic pricing)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-box" style="margin-top:16px;">
+    <div style="font-size:0.7em; color:var(--text-secondary);">For a 100-store retail chain</div>
+    <div class="stat-number" style="font-size:1.6em;">₹8-12 Cr Annual Impact</div>
+    <div style="font-size:0.65em; color:var(--text-secondary); margin-top:4px;">Within 18 months of full deployment &nbsp;|&nbsp; Platform payback: <strong style="color:var(--brand-secondary);">4-6 months</strong></div>
+  </div>
+  <aside class="notes">
+    "We're not asking you to take a leap of faith. The operational savings alone — just POS and dashboards — typically pay for the entire platform within 4-6 months. Everything else is upside." The "100-store chain" language is generic — let them do the math themselves. This estimate is conservative — doesn't account for peak season stockout recovery.
+  </aside>
+</section>
+
+<!-- ============ SLIDE 14: IMPLEMENTATION ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-platform">Rollout</span>
+  <h2>Value in 8 Weeks. <span class="gradient-text">Full Platform in 6 Months.</span></h2>
+  <div class="timeline">
+    <div class="timeline-phase">
+      <div class="phase-marker" style="background:rgba(245,166,35,0.15); color:var(--brand-gold);">P1</div>
+      <div class="phase-content">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <div class="phase-title">Foundation — Smart POS + Command Center</div>
+          <div class="phase-time">Weeks 1-8</div>
+        </div>
+        <div class="phase-desc">Deploy across 10-15 pilot stores. HQ dashboards live. Staff trained. Parallel running with existing systems — zero business disruption. Immediate, visible value.</div>
+      </div>
+    </div>
+    <div class="timeline-phase">
+      <div class="phase-marker" style="background:rgba(0,212,170,0.15); color:var(--brand-secondary);">P2</div>
+      <div class="phase-content">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <div class="phase-title">Intelligence — Forecasting, Inventory AI, Staff Performance</div>
+          <div class="phase-time">Weeks 9-16</div>
+        </div>
+        <div class="phase-desc">Activate demand forecasting and inventory intelligence on pilot stores. Staff performance AI and training modules go live. Customer data unification begins across channels.</div>
+      </div>
+    </div>
+    <div class="timeline-phase">
+      <div class="phase-marker" style="background:rgba(108,99,255,0.15); color:var(--brand-primary);">P3</div>
+      <div class="phase-content">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <div class="phase-title">Experience — FragranceAI, WhatsApp CRM, Dynamic Pricing</div>
+          <div class="phase-time">Weeks 17-24</div>
+        </div>
+        <div class="phase-desc">Full AI suite deployed. WhatsApp CRM campaigns live. Dynamic pricing engine activated. Rollout across all stores. Full platform operational.</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-grid grid-3" style="margin-top:16px;">
+    <div class="card" style="text-align:center;">
+      <div style="font-size:0.7em; font-weight:700; color:var(--text-primary);">Dedicated Team</div>
+      <div style="font-size:0.55em; color:var(--text-secondary);">Not a self-serve setup</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:0.7em; font-weight:700; color:var(--text-primary);">Parallel Running</div>
+      <div style="font-size:0.55em; color:var(--text-secondary);">Zero disruption to operations</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:0.7em; font-weight:700; color:var(--text-primary);">Franchise Playbook</div>
+      <div style="font-size:0.55em; color:var(--text-secondary);">Onboarding guide included</div>
+    </div>
+  </div>
+  <aside class="notes">
+    "We always start with the foundation — POS and dashboards — because they generate the data that powers everything else. And they deliver immediate, visible value." The pilot approach: "See results at 10-15 stores before committing to full rollout. We earn the expansion." Phase 1 focus on POS and dashboards is architecturally justified. "You cannot run AI on bad data."
+  </aside>
+</section>
+
+<!-- ============ SLIDE 15: WHY BETTROI ============ -->
+<section data-background-color="#0a0a0f">
+  <span class="slide-tag tag-platform">Why Us, Why Now</span>
+  <h2>Built for <span class="gradient-text">This Moment</span></h2>
+  <div class="card-grid grid-2" style="margin-top:20px;">
+    <div class="card">
+      <h3 style="color:var(--brand-primary);">Retail-Native</h3>
+      <p style="font-size:0.65em;">Built exclusively for retail. Not horizontal SaaS adapted for retail — retail-native, retail-only. We understand the floor.</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--brand-secondary);">India-First</h3>
+      <p style="font-size:0.65em;">GST complexity, UPI payments, Hindi &amp; regional language support, offline-first architecture, WhatsApp integration. Built for Indian reality.</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--brand-gold);">AI-Native</h3>
+      <p style="font-size:0.65em;">AI is not a feature we bolted on. It is the architecture. Every module generates data, every data point trains the AI, every AI output improves the business.</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--brand-accent);">Scale-Ready</h3>
+      <p style="font-size:0.65em;">Designed from day one for 100+ store chains. Multi-format, multi-channel, franchise-ready. Scales from pilot to national without re-architecture.</p>
+    </div>
+  </div>
+  <div class="cta-box">
+    <div style="font-size:1.1em; font-weight:800; color:var(--text-primary); margin-bottom:8px;">Let's Start With a Pilot</div>
+    <div style="font-size:0.75em; color:var(--text-secondary);">10-15 stores &nbsp;·&nbsp; 8 weeks &nbsp;·&nbsp; Let the results speak</div>
+    <div style="margin-top:16px; font-size:0.7em;">
+      <span style="font-weight:700; color:var(--text-primary);">BETTROI</span>
+      <span style="color:var(--text-muted); margin:0 8px;">|</span>
+      <span style="color:var(--text-secondary);">hello@bettroi.com</span>
+    </div>
+  </div>
+  <aside class="notes">
+    Close with conviction: "The retail chains that modernize their operations this year will define the next decade. The ones that wait will spend the next decade catching up." "We're not asking you to be a guinea pig. We're asking you to be a leader." End with: "10-15 stores, 8 weeks, let the results speak." Leave contact info on screen during Q&A.
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: true,
+  showNotes: false,
+  transition: 'slide',
+  transitionSpeed: 'default',
+  backgroundTransition: 'fade',
+  width: 1280,
+  height: 720,
+  margin: 0,
+  center: false,
+  progress: true,
+  controls: true,
+  keyboard: true,
+  overview: true
+});
+</script>
+</body>
+</html>
