@@ -1,0 +1,31 @@
+{
+  "colors": {
+    "goldPrimary": "#BC8B57",
+    "goldDark": "#754C28",
+    "goldMedium": "#7E6040",
+    "goldHover": "#D08C03",
+    "goldBright": "#E5AD23",
+    "warmBlack": "#2B2826",
+    "creamBg": "#F9F5F1",
+    "beigeSection": "#F3ECE3",
+    "sand": "#E4D5C7",
+    "lightBeige": "#F0E6DB",
+    "textPrimary": "#2B2826",
+    "textSecondary": "#727272",
+    "textMuted": "#A4A4A4",
+    "border": "#C8C8C8",
+    "success": "#00940F",
+    "warning": "#E5AD23",
+    "error": "#BE4040"
+  },
+  "fonts": {
+    "heading": "'Inter', -apple-system, sans-serif",
+    "body": "'Inter', -apple-system, sans-serif",
+    "display": "'Philosopher', serif"
+  },
+  "borderRadius": {
+    "card": "12px",
+    "button": "50px",
+    "badge": "8px"
+  }
+}

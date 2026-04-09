@@ -1,0 +1,58 @@
+BRAND: Ajmal Perfumes — premium Arabian fragrance house, est. 1951, Dubai.
+Indian retail presence: 100+ stores across Mumbai, Delhi, Hyderabad, Bangalore, Chennai, Lucknow, Jaipur.
+Product range: EDP, EDT, Attar, Bakhoor, Body Mist, Gift Sets. Price range ₹375 to ₹7,500+.
+
+EXACT BRAND COLORS (from ajmal.com):
+- Signature Gold: #BC8B57 (primary accent — buttons, CTAs, highlights)
+- Gold Dark: #754C28 (headings, titles)
+- Gold Medium: #7E6040 (secondary headings)
+- Warm Black: #2B2826 (body text — NEVER pure black)
+- Cream Background: #F9F5F1 (primary page background — NEVER pure white)
+- Beige Section: #F3ECE3 (card backgrounds, section fills)
+- Sand: #E4D5C7 (tertiary areas, footer)
+- Light Beige: #F0E6DB (sidebar, secondary backgrounds)
+
+TYPOGRAPHY STYLE:
+- Headings: elegant sans-serif, generous letter-spacing (1-2px), uppercase for labels
+- Body: clean sans-serif, warm black text
+- Numbers/metrics: bold, gold-accented
+
+DESIGN LANGUAGE:
+- Light, airy luxury — high-end boutique aesthetic, NOT a tech dashboard
+- Warm cream/beige backgrounds with gold accents
+- Cards with soft gold-tinted shadows (rgba(188, 139, 87, 0.25))
+- Rounded corners (12-16px) on cards
+- Pill-shaped buttons (border-radius: 50px)
+- Subtle Middle Eastern geometric patterns as decorative elements
+- Data visualizations in gold/bronze/amber tones
+- Left sidebar navigation with cream/beige background
+- Top bar with role switcher and notification bell
+
+
+Generate a SINGLE high-fidelity UI mockup of a STAFF PERFORMANCE screen.
+
+LAYOUT: Same sidebar and top bar. Main content on cream background.
+
+CONTENT:
+- Page title: "Staff Performance" with filter: "Store 12 — Mumbai" dropdown
+
+LEFT (55%) — Individual Scorecard:
+- Staff card header: Avatar circle, "Fatima Khan", "Senior Associate", "Store 12 Mumbai", "Joined: Mar 2024"
+- Performance metrics in 2x2 grid of beige cards:
+  "Sales/Hour: ₹4,200" (gold, ↑12% trend)
+  "Conversion Rate: 34%" (green arrow up)
+  "Avg Basket: ₹3,100" (gold)
+  "Upsell Rate: 28%" (amber, needs improvement marker)
+- Bar chart: "Monthly Performance Trend" — 6 months, gold bars
+- "Certifications": 3 badge icons (Oud Expert, Product Master, POS Pro)
+
+RIGHT (45%) — AI Coaching:
+- "AI Coaching Insight" card with gold brain icon:
+  "Fatima has high conversion (34%) but below-average upsell rate (28%).
+   Recommended: Complete 'Cross-sell Mastery' module in Academy.
+   Staff with similar profiles saw 40% upsell improvement after this module."
+- "Quick Actions" buttons: "Assign Training", "Schedule 1:1", "View Full History"
+- "Team Comparison" mini chart: showing Fatima vs store average vs top performer
+
+Style: data-rich but warm. Performance data presented with dignity, not surveillance.
+Resolution: 1920x1080.

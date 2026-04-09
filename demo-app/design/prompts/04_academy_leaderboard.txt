@@ -1,0 +1,61 @@
+BRAND: Ajmal Perfumes — premium Arabian fragrance house, est. 1951, Dubai.
+Indian retail presence: 100+ stores across Mumbai, Delhi, Hyderabad, Bangalore, Chennai, Lucknow, Jaipur.
+Product range: EDP, EDT, Attar, Bakhoor, Body Mist, Gift Sets. Price range ₹375 to ₹7,500+.
+
+EXACT BRAND COLORS (from ajmal.com):
+- Signature Gold: #BC8B57 (primary accent — buttons, CTAs, highlights)
+- Gold Dark: #754C28 (headings, titles)
+- Gold Medium: #7E6040 (secondary headings)
+- Warm Black: #2B2826 (body text — NEVER pure black)
+- Cream Background: #F9F5F1 (primary page background — NEVER pure white)
+- Beige Section: #F3ECE3 (card backgrounds, section fills)
+- Sand: #E4D5C7 (tertiary areas, footer)
+- Light Beige: #F0E6DB (sidebar, secondary backgrounds)
+
+TYPOGRAPHY STYLE:
+- Headings: elegant sans-serif, generous letter-spacing (1-2px), uppercase for labels
+- Body: clean sans-serif, warm black text
+- Numbers/metrics: bold, gold-accented
+
+DESIGN LANGUAGE:
+- Light, airy luxury — high-end boutique aesthetic, NOT a tech dashboard
+- Warm cream/beige backgrounds with gold accents
+- Cards with soft gold-tinted shadows (rgba(188, 139, 87, 0.25))
+- Rounded corners (12-16px) on cards
+- Pill-shaped buttons (border-radius: 50px)
+- Subtle Middle Eastern geometric patterns as decorative elements
+- Data visualizations in gold/bronze/amber tones
+- Left sidebar navigation with cream/beige background
+- Top bar with role switcher and notification bell
+
+
+Generate a SINGLE high-fidelity UI mockup of the L&D ACADEMY / LEADERBOARD screen.
+
+LAYOUT: Same sidebar and top bar. Main content on cream background.
+
+CONTENT:
+- Page title: "Bettroi Academy" with subtitle "Where Your Team Levels Up"
+- Tab bar: "Leaderboard" (active, gold underline), "My Learning", "Certifications", "Team Battles"
+
+LEFT SECTION (60% width) — LEADERBOARD:
+- Time filter pills: "This Week" (active, gold), "This Month", "All Time"
+- Top 3 podium-style cards:
+  #1: "Fatima K." — Store 12 Mumbai — 2,450 XP — Gold crown icon — "🏆 Oud Expert" badge
+  #2: "Ravi S." — Store 47 Delhi — 2,180 XP — Silver badge
+  #3: "Priya M." — Store 8 Bangalore — 1,920 XP — Bronze badge
+  Each with XP progress bar in gold gradient, small avatar circle, store name
+
+- Below: ranked list #4-#10 with smaller rows, XP bars, trend arrows (↑3, ↓1, →)
+
+RIGHT SECTION (40% width):
+- "Your Badges" card showing 6 badge icons in a 3x2 grid:
+  Oud Expert (gold, earned), Top Seller (gold, earned), Customer Champion (gold, earned),
+  Bakhoor Master (locked/gray), 30-Day Streak (locked), Regional Star (locked)
+  Each badge: circular with ornate gold border, icon in center
+
+- "Active Streak" card: "🔥 12 Days" with flame animation implied, "Keep it up! 3 more days for Gold Streak badge"
+
+- "Store Battle" card: "Store 12 vs Store 23 — Mumbai Derby" with two progress bars and score
+
+Style: gamification meets luxury — gold XP bars, ornate badge designs, excitement without being childish.
+Resolution: 1920x1080.

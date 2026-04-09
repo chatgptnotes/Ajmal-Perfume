@@ -1,0 +1,16 @@
+{
+  "brand": "Ajmal Perfumes",
+  "tagline": "From Billing to Brilliance",
+  "established": 1951,
+  "headquarters": "Dubai, UAE",
+  "indiaHQ": "Mumbai, India",
+  "storeCount": 112,
+  "activeStores": 108,
+  "formats": ["Exclusive Boutique", "Shop-in-Shop", "Kiosk", "Airport"],
+  "channels": ["Retail", "Nykaa", "Amazon", "Shoppers Stop", "Airport"],
+  "regions": ["Mumbai", "Delhi NCR", "Hyderabad", "Bangalore", "Chennai", "Kolkata", "Lucknow", "Jaipur", "Ahmedabad", "Kochi", "Pune"],
+  "currency": "INR",
+  "currencySymbol": "₹",
+  "logo": "/assets/ajmal-logo.svg",
+  "website": "in.ajmal.com"
+}

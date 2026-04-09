@@ -1,0 +1,71 @@
+[
+  {
+    "id": "c001", "name": "Priya Sharma", "segment": "High-Value Loyalist", "ltv": 124000, "memberSince": "2022-06-10",
+    "churnRisk": "low", "preferredNotes": ["Oud", "Amber", "Rose"], "avgPurchaseCycle": 75,
+    "nextPurchasePredicted": "2026-04-18", "preferredChannel": "Retail",
+    "channelSplit": { "retail": 60, "nykaa": 25, "amazon": 15 },
+    "purchases": [
+      { "date": "2026-03-02", "channel": "Retail", "store": "Store 8 — Koramangala", "product": "Wisal 50ml", "amount": 2400 },
+      { "date": "2026-01-10", "channel": "Nykaa", "product": "Amber Wood 100ml", "amount": 4800 },
+      { "date": "2025-11-05", "channel": "Amazon", "product": "Eid Gift Set", "amount": 3200 },
+      { "date": "2025-09-12", "channel": "Retail", "store": "Store 12 — Juhu", "product": "Dahn Al Oudh 50ml", "amount": 6500 }
+    ],
+    "actions": ["Send restock reminder — Wisal likely running low", "Invite to Eid preview event", "Cross-sell: hasn't tried Bakhoor yet"]
+  },
+  {
+    "id": "c002", "name": "Arjun Mehta", "segment": "Regular Buyer", "ltv": 68000, "memberSince": "2023-03-20",
+    "churnRisk": "medium", "preferredNotes": ["Woody", "Citrus", "Fresh"], "avgPurchaseCycle": 90,
+    "nextPurchasePredicted": "2026-05-01", "preferredChannel": "Online",
+    "channelSplit": { "retail": 30, "nykaa": 40, "amazon": 30 },
+    "purchases": [
+      { "date": "2026-02-05", "channel": "Nykaa", "product": "Silver Shade 100ml", "amount": 1200 },
+      { "date": "2025-11-20", "channel": "Retail", "store": "Store 15 — CP", "product": "Evoke Gold 75ml", "amount": 1800 },
+      { "date": "2025-08-15", "channel": "Amazon", "product": "Shadow 75ml", "amount": 1600 }
+    ],
+    "actions": ["Re-engage — nearing 60-day silence", "Suggest Amber Wood as upgrade from Evoke Gold", "Birthday offer due May 12"]
+  },
+  {
+    "id": "c003", "name": "Fatima Khan", "segment": "Premium Collector", "ltv": 210000, "memberSince": "2021-01-15",
+    "churnRisk": "low", "preferredNotes": ["Oud", "Rose", "Saffron"], "avgPurchaseCycle": 45,
+    "nextPurchasePredicted": "2026-04-10", "preferredChannel": "Retail",
+    "channelSplit": { "retail": 85, "nykaa": 10, "amazon": 5 },
+    "purchases": [
+      { "date": "2026-02-28", "channel": "Retail", "store": "Store 12 — Juhu", "product": "Sacrifice 50ml", "amount": 4200 },
+      { "date": "2026-01-15", "channel": "Retail", "store": "Store 12 — Juhu", "product": "Hatkora Attar 12ml", "amount": 5800 },
+      { "date": "2025-12-01", "channel": "Retail", "store": "Store 78 — Airport T2", "product": "Eid Gift Set Premium", "amount": 7500 }
+    ],
+    "actions": ["VIP: Personal call from store manager", "New launch preview — Sacrifice II", "Loyalty tier upgrade to Platinum"]
+  },
+  {
+    "id": "c004", "name": "Rahul Deshmukh", "segment": "Lapsed", "ltv": 32000, "memberSince": "2023-09-01",
+    "churnRisk": "high", "preferredNotes": ["Musk", "Fresh", "Aquatic"], "avgPurchaseCycle": 120,
+    "nextPurchasePredicted": "overdue", "preferredChannel": "Retail",
+    "channelSplit": { "retail": 70, "nykaa": 20, "amazon": 10 },
+    "purchases": [
+      { "date": "2025-08-10", "channel": "Retail", "store": "Store 70 — FC Road", "product": "Silver Shade 100ml", "amount": 1200 },
+      { "date": "2025-04-22", "channel": "Nykaa", "product": "Musk Rose Body Mist", "amount": 375 }
+    ],
+    "actions": ["Win-back campaign — 15% off next purchase", "WhatsApp restock reminder", "Survey: why did you stop buying?"]
+  },
+  {
+    "id": "c005", "name": "Meera Krishnan", "segment": "First-Time Buyer", "ltv": 2400, "memberSince": "2026-03-15",
+    "churnRisk": "medium", "preferredNotes": ["Floral", "Vanilla"], "avgPurchaseCycle": null,
+    "nextPurchasePredicted": "2026-06-15", "preferredChannel": "Retail",
+    "channelSplit": { "retail": 100, "nykaa": 0, "amazon": 0 },
+    "purchases": [
+      { "date": "2026-03-15", "channel": "Retail", "store": "Store 31 — T. Nagar", "product": "Wisal 50ml", "amount": 2400 }
+    ],
+    "actions": ["Welcome series — introduce product range via WhatsApp", "Suggest Aurum as next try (matches floral preference)", "Invite to fragrance discovery workshop"]
+  },
+  {
+    "id": "c006", "name": "Imran Siddiqui", "segment": "High-Value Loyalist", "ltv": 156000, "memberSince": "2022-02-20",
+    "churnRisk": "low", "preferredNotes": ["Oud", "Amber", "Spicy"], "avgPurchaseCycle": 50,
+    "nextPurchasePredicted": "2026-04-25", "preferredChannel": "Retail",
+    "channelSplit": { "retail": 75, "nykaa": 15, "amazon": 10 },
+    "purchases": [
+      { "date": "2026-03-05", "channel": "Retail", "store": "Store 41 — Hazratganj", "product": "Dahn Al Oudh 50ml", "amount": 6500 },
+      { "date": "2026-01-28", "channel": "Retail", "store": "Store 41 — Hazratganj", "product": "Bakhoor Al Mas 50g", "amount": 850 }
+    ],
+    "actions": ["Eid gift set pre-order offer", "Introduce new Sacrifice II at store visit", "Loyalty points redemption reminder — 4,200 pts available"]
+  }
+]

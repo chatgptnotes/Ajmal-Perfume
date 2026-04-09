@@ -1,0 +1,60 @@
+{
+  "dashboard": {
+    "todayRevenue": 4730000,
+    "todayTransactions": 1847,
+    "avgBasketSize": 2560,
+    "activeStores": 108,
+    "totalStores": 112,
+    "weekOverWeekGrowth": 8.3,
+    "monthTarget": 142000000,
+    "monthActual": 118500000,
+    "monthProgress": 83.4
+  },
+  "salesTrend": [
+    { "day": "Mon", "sales": 3800000 },
+    { "day": "Tue", "sales": 4100000 },
+    { "day": "Wed", "sales": 3950000 },
+    { "day": "Thu", "sales": 4250000 },
+    { "day": "Fri", "sales": 4600000 },
+    { "day": "Sat", "sales": 5200000 },
+    { "day": "Sun", "sales": 4730000 }
+  ],
+  "topStores": [
+    { "name": "Store 78 — Airport T2", "city": "Mumbai", "sales": 2750000 },
+    { "name": "Store 12 — Juhu", "city": "Mumbai", "sales": 2450000 },
+    { "name": "Store 85 — Airport T3", "city": "Delhi", "sales": 2100000 },
+    { "name": "Store 15 — CP", "city": "Delhi", "sales": 2180000 },
+    { "name": "Store 98 — Jubilee Hills", "city": "Hyderabad", "sales": 1620000 }
+  ],
+  "topSKUs": [
+    { "name": "Dahn Al Oudh 50ml", "unitsSold": 342, "revenue": 2223000 },
+    { "name": "Amber Wood 75ml", "unitsSold": 418, "revenue": 1337600 },
+    { "name": "Sacrifice 50ml", "unitsSold": 198, "revenue": 831600 },
+    { "name": "Wisal 50ml", "unitsSold": 356, "revenue": 854400 },
+    { "name": "Eid Gift Set Premium", "unitsSold": 104, "revenue": 780000 }
+  ],
+  "alerts": [
+    { "type": "warning", "title": "Below Target", "message": "Store 23 Hyderabad at 82.5% of monthly target — 4 days remaining", "severity": "high" },
+    { "type": "stock", "title": "Low Stock Alert", "message": "Dahn Al Oudh 50ml — below reorder point at 6 stores", "severity": "high" },
+    { "type": "churn", "title": "Customer Churn Risk", "message": "142 high-value customers inactive for 60+ days", "severity": "medium" },
+    { "type": "performance", "title": "Staff Alert", "message": "3 associates at Store 52 Jaipur below minimum conversion threshold", "severity": "medium" }
+  ],
+  "recentTransactions": [
+    { "store": "Store 47 — Lajpat Nagar", "city": "Delhi", "product": "Dahn Al Oudh 50ml", "amount": 6500, "minutesAgo": 2 },
+    { "store": "Store 12 — Juhu", "city": "Mumbai", "product": "Amber Wood 75ml", "amount": 3200, "minutesAgo": 5 },
+    { "store": "Store 8 — Koramangala", "city": "Bangalore", "product": "Eid Gift Set Premium", "amount": 7500, "minutesAgo": 8 },
+    { "store": "Store 78 — Airport T2", "city": "Mumbai", "product": "Sacrifice 50ml", "amount": 4200, "minutesAgo": 11 },
+    { "store": "Store 31 — T. Nagar", "city": "Chennai", "product": "Wisal 50ml", "amount": 2400, "minutesAgo": 14 },
+    { "store": "Store 41 — Hazratganj", "city": "Lucknow", "product": "Bakhoor Al Mas", "amount": 850, "minutesAgo": 17 },
+    { "store": "Store 15 — CP", "city": "Delhi", "product": "Evoke Gold 75ml", "amount": 1800, "minutesAgo": 20 },
+    { "store": "Store 98 — Jubilee Hills", "city": "Hyderabad", "product": "Aurum 75ml", "amount": 2800, "minutesAgo": 23 },
+    { "store": "Store 63 — MG Road", "city": "Kochi", "product": "Silver Shade 100ml", "amount": 1200, "minutesAgo": 26 },
+    { "store": "Store 91 — Indiranagar", "city": "Bangalore", "product": "Hatkora Attar 12ml", "amount": 5800, "minutesAgo": 30 }
+  ],
+  "regionBreakdown": [
+    { "region": "West", "stores": 32, "revenue": 38500000, "percentage": 32.5 },
+    { "region": "North", "stores": 34, "revenue": 35200000, "percentage": 29.7 },
+    { "region": "South", "stores": 30, "revenue": 31800000, "percentage": 26.8 },
+    { "region": "East", "stores": 12, "revenue": 13000000, "percentage": 11.0 }
+  ]
+}

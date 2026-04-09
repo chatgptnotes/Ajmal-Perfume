@@ -1,0 +1,66 @@
+BRAND: Ajmal Perfumes — premium Arabian fragrance house, est. 1951, Dubai.
+Indian retail presence: 100+ stores across Mumbai, Delhi, Hyderabad, Bangalore, Chennai, Lucknow, Jaipur.
+Product range: EDP, EDT, Attar, Bakhoor, Body Mist, Gift Sets. Price range ₹375 to ₹7,500+.
+
+EXACT BRAND COLORS (from ajmal.com):
+- Signature Gold: #BC8B57 (primary accent — buttons, CTAs, highlights)
+- Gold Dark: #754C28 (headings, titles)
+- Gold Medium: #7E6040 (secondary headings)
+- Warm Black: #2B2826 (body text — NEVER pure black)
+- Cream Background: #F9F5F1 (primary page background — NEVER pure white)
+- Beige Section: #F3ECE3 (card backgrounds, section fills)
+- Sand: #E4D5C7 (tertiary areas, footer)
+- Light Beige: #F0E6DB (sidebar, secondary backgrounds)
+
+TYPOGRAPHY STYLE:
+- Headings: elegant sans-serif, generous letter-spacing (1-2px), uppercase for labels
+- Body: clean sans-serif, warm black text
+- Numbers/metrics: bold, gold-accented
+
+DESIGN LANGUAGE:
+- Light, airy luxury — high-end boutique aesthetic, NOT a tech dashboard
+- Warm cream/beige backgrounds with gold accents
+- Cards with soft gold-tinted shadows (rgba(188, 139, 87, 0.25))
+- Rounded corners (12-16px) on cards
+- Pill-shaped buttons (border-radius: 50px)
+- Subtle Middle Eastern geometric patterns as decorative elements
+- Data visualizations in gold/bronze/amber tones
+- Left sidebar navigation with cream/beige background
+- Top bar with role switcher and notification bell
+
+
+Generate a SINGLE high-fidelity UI mockup of a CUSTOMER ANALYTICS / PROFILE screen.
+
+LAYOUT: Same sidebar and top bar. Main content on cream background.
+
+CONTENT:
+- Page title: "Customer Intelligence" with search bar
+
+CUSTOMER PROFILE (full width):
+- Header card: "Priya Sharma" — "High-Value Loyalist" gold segment badge — LTV: ₹1,24,000 — Member since 2022
+- Churn risk indicator: green "Low Risk" with small gauge
+
+- 3-column layout below:
+  Column 1 — "Purchase History":
+    Timeline of purchases across channels:
+    "Mar 2026 — Retail Store 8 BLR — Wisal 50ml — ₹2,400"
+    "Jan 2026 — Nykaa — Amber Wood 100ml — ₹4,800"
+    "Nov 2025 — Amazon — Gift Set — ₹3,200"
+    "Sep 2025 — Retail Store 12 MUM — Dahn Al Oudh — ₹6,500"
+    Channel icons (store, Nykaa, Amazon) next to each entry
+
+  Column 2 — "Preferences & Patterns":
+    "Preferred Notes: Oud, Amber, Rose"
+    "Avg Purchase Cycle: 2.5 months"
+    "Next Purchase Predicted: April 2026"
+    "Preferred Channel: Retail (60%), Online (40%)"
+    Pie chart of channel split in gold/amber tones
+
+  Column 3 — "Recommended Actions":
+    Action card 1: "Send restock reminder — Wisal likely running low"
+    Action card 2: "Invite to Eid preview event — matches VIP segment"
+    Action card 3: "Cross-sell: She hasn't tried Bakhoor yet"
+    Each with gold "Execute →" button
+
+Style: unified customer view that feels like a luxury concierge dossier, not a CRM spreadsheet.
+Resolution: 1920x1080.

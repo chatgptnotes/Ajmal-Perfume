@@ -1,0 +1,58 @@
+BRAND: Ajmal Perfumes — premium Arabian fragrance house, est. 1951, Dubai.
+Indian retail presence: 100+ stores across Mumbai, Delhi, Hyderabad, Bangalore, Chennai, Lucknow, Jaipur.
+Product range: EDP, EDT, Attar, Bakhoor, Body Mist, Gift Sets. Price range ₹375 to ₹7,500+.
+
+EXACT BRAND COLORS (from ajmal.com):
+- Signature Gold: #BC8B57 (primary accent — buttons, CTAs, highlights)
+- Gold Dark: #754C28 (headings, titles)
+- Gold Medium: #7E6040 (secondary headings)
+- Warm Black: #2B2826 (body text — NEVER pure black)
+- Cream Background: #F9F5F1 (primary page background — NEVER pure white)
+- Beige Section: #F3ECE3 (card backgrounds, section fills)
+- Sand: #E4D5C7 (tertiary areas, footer)
+- Light Beige: #F0E6DB (sidebar, secondary backgrounds)
+
+TYPOGRAPHY STYLE:
+- Headings: elegant sans-serif, generous letter-spacing (1-2px), uppercase for labels
+- Body: clean sans-serif, warm black text
+- Numbers/metrics: bold, gold-accented
+
+DESIGN LANGUAGE:
+- Light, airy luxury — high-end boutique aesthetic, NOT a tech dashboard
+- Warm cream/beige backgrounds with gold accents
+- Cards with soft gold-tinted shadows (rgba(188, 139, 87, 0.25))
+- Rounded corners (12-16px) on cards
+- Pill-shaped buttons (border-radius: 50px)
+- Subtle Middle Eastern geometric patterns as decorative elements
+- Data visualizations in gold/bronze/amber tones
+- Left sidebar navigation with cream/beige background
+- Top bar with role switcher and notification bell
+
+
+Generate a SINGLE high-fidelity UI mockup of a SMART POS (Point of Sale) billing screen.
+
+LAYOUT: Same sidebar (collapsed to icon-only, 60px wide) and slim top bar. Main content maximized.
+
+CONTENT:
+- Split view:
+  LEFT (55%): "Current Transaction"
+    - Customer: "Arjun Mehta — Gold Member" with loyalty badge
+    - Item list table:
+      1. Dahn Al Oudh 50ml — ₹6,500 — Qty: 1
+      2. Wisal EDP 50ml — ₹2,400 — Qty: 1
+      3. Bakhoor Al Mas — ₹850 — Qty: 2
+    - Auto-applied promo banner (green/gold): "Festival Offer: 10% off on 3+ items — ₹975 saved!"
+    - Subtotal: ₹10,600 → After discount: ₹9,625
+    - GST (18%): ₹1,732.50
+    - TOTAL: ₹11,357.50 (large, gold, bold)
+
+  RIGHT (45%): "Quick Actions"
+    - Product search bar with gold border
+    - 8 quick-access product tiles (2x4 grid) with product images, names, prices
+    - Payment method pills: "UPI" (active), "Card", "Cash", "Wallet"
+    - Large gold "Complete Transaction ✓" button at bottom
+
+- Bottom status bar: "Store 12 Mumbai | Terminal 3 | Offline Mode: Synced ✓ | Today: 47 transactions"
+
+Style: efficient but elegant. A luxury POS that feels premium, not clinical.
+Resolution: 1920x1080.

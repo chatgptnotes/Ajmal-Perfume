@@ -1,0 +1,72 @@
+[
+  {
+    "id": "st001", "name": "Fatima Khan", "role": "Senior Associate", "store": "Store 12 — Juhu", "city": "Mumbai",
+    "joinDate": "2024-03-15", "salesPerHour": 4200, "conversionRate": 34, "avgBasket": 3100, "upsellRate": 28,
+    "xp": 2450, "streak": 12, "rank": 1,
+    "badges": ["Oud Expert", "Top Seller", "Customer Champion"],
+    "coachingNote": "High conversion but below-average upsell. Recommend Cross-sell Mastery module."
+  },
+  {
+    "id": "st002", "name": "Ravi Shankar", "role": "Associate", "store": "Store 47 — Lajpat Nagar", "city": "Delhi",
+    "joinDate": "2024-06-01", "salesPerHour": 3800, "conversionRate": 31, "avgBasket": 2800, "upsellRate": 35,
+    "xp": 2180, "streak": 8, "rank": 2,
+    "badges": ["Product Master", "Upsell King"],
+    "coachingNote": "Strong upseller. Ready for Store Manager fast-track."
+  },
+  {
+    "id": "st003", "name": "Priya Menon", "role": "Senior Associate", "store": "Store 8 — Koramangala", "city": "Bangalore",
+    "joinDate": "2023-11-10", "salesPerHour": 3600, "conversionRate": 29, "avgBasket": 3400, "upsellRate": 32,
+    "xp": 1920, "streak": 15, "rank": 3,
+    "badges": ["Oud Expert", "15-Day Streak", "POS Pro"],
+    "coachingNote": "Excellent basket size. Needs conversion improvement — try greeting workshop."
+  },
+  {
+    "id": "st004", "name": "Arjun Reddy", "role": "Associate", "store": "Store 98 — Jubilee Hills", "city": "Hyderabad",
+    "joinDate": "2024-08-20", "salesPerHour": 3200, "conversionRate": 27, "avgBasket": 2600, "upsellRate": 24,
+    "xp": 1650, "streak": 5, "rank": 4,
+    "badges": ["Fast Learner"],
+    "coachingNote": "New but promising. Assign fragrance family deep-dive modules."
+  },
+  {
+    "id": "st005", "name": "Sneha Pillai", "role": "Store Manager", "store": "Store 63 — MG Road", "city": "Kochi",
+    "joinDate": "2023-05-01", "salesPerHour": 5100, "conversionRate": 38, "avgBasket": 3800, "upsellRate": 41,
+    "xp": 3200, "streak": 22, "rank": 5,
+    "badges": ["Oud Expert", "Top Seller", "Customer Champion", "Manager Elite", "30-Day Streak"],
+    "coachingNote": "Top performer nationally. Consider for regional trainer role."
+  },
+  {
+    "id": "st006", "name": "Mohammed Irfan", "role": "Associate", "store": "Store 41 — Hazratganj", "city": "Lucknow",
+    "joinDate": "2025-01-10", "salesPerHour": 2400, "conversionRate": 22, "avgBasket": 2200, "upsellRate": 18,
+    "xp": 890, "streak": 3, "rank": 12,
+    "badges": [],
+    "coachingNote": "Struggling with product knowledge. Priority: complete all Foundation modules this week."
+  },
+  {
+    "id": "st007", "name": "Divya Nair", "role": "Senior Associate", "store": "Store 31 — T. Nagar", "city": "Chennai",
+    "joinDate": "2024-01-15", "salesPerHour": 3900, "conversionRate": 33, "avgBasket": 2950, "upsellRate": 30,
+    "xp": 2050, "streak": 10, "rank": 6,
+    "badges": ["Product Master", "Customer Champion"],
+    "coachingNote": "Consistent performer. Push towards Oud Expert certification."
+  },
+  {
+    "id": "st008", "name": "Vikram Singh", "role": "Associate", "store": "Store 15 — Connaught Place", "city": "Delhi",
+    "joinDate": "2024-04-01", "salesPerHour": 3500, "conversionRate": 30, "avgBasket": 2700, "upsellRate": 26,
+    "xp": 1780, "streak": 0, "rank": 7,
+    "badges": ["POS Pro"],
+    "coachingNote": "Streak broken. Re-engage with daily challenge incentive."
+  },
+  {
+    "id": "st009", "name": "Ananya Das", "role": "Trainee", "store": "Store 35 — Park Street", "city": "Kolkata",
+    "joinDate": "2025-03-01", "salesPerHour": 1800, "conversionRate": 18, "avgBasket": 1900, "upsellRate": 12,
+    "xp": 340, "streak": 7, "rank": 18,
+    "badges": [],
+    "coachingNote": "Week 5 of onboarding. On track — completing modules ahead of schedule."
+  },
+  {
+    "id": "st010", "name": "Samira Begum", "role": "Senior Associate", "store": "Store 23 — Banjara Hills", "city": "Hyderabad",
+    "joinDate": "2023-08-15", "salesPerHour": 4000, "conversionRate": 32, "avgBasket": 3300, "upsellRate": 36,
+    "xp": 2300, "streak": 18, "rank": 8,
+    "badges": ["Oud Expert", "Upsell King", "Bakhoor Master"],
+    "coachingNote": "Excellent cross-sell instincts. Model for team training."
+  }
+]
